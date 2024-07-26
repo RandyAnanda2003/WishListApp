@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPlanActivity">
+
+    <!-- ScrollView for Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/footer">
+
+        <!-- LinearLayout for Content -->
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Update Rencana"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/biru_gelap" />
+
+            <!-- Image and Subtitle -->
+            <LinearLayout
+                android:id="@+id/headerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgHeader"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/edit_rencana" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:id="@+id/tvSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ada Pembaruan ?!"
+                        android:textSize="18sp"
+                        android:textColor="@color/biru_gelap"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSubtitleDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update rencana perjalanan mu sesuaika dengan kondisi yang baru"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Input Fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- Title Input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/info2_logo" />
+
+                    <EditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kepulauan Sangihe Yuhu"
+                        android:textSize="16sp"
+                        android:paddingStart="8dp"
+                        android:textColor="#757575" />
+                </LinearLayout>
+
+                <!-- Date Input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/info2_logo" />
+
+                    <EditText
+                        android:id="@+id/etDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="21-30 July 2024"
+                        android:textSize="16sp"
+                        android:paddingStart="8dp"
+                        android:textColor="#757575" />
+                </LinearLayout>
+
+                <!-- Budget Input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/info2_logo" />
+
+                    <EditText
+                        android:id="@+id/etBudget"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="15.000.000"
+                        android:textSize="16sp"
+                        android:paddingStart="8dp"
+                        android:textColor="#757575" />
+                </LinearLayout>
+
+                <!-- Destination Input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/info2_logo" />
+
+                        <TextView
+                            android:id="@+id/tvDestination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Destinasi Wisata"
+                            android:textSize="16sp"
+                            android:textColor="@color/biru_gelap"
+                            android:textStyle="bold"
+                            android:paddingStart="8dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvDestinationDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ubah destinasi wisata di maps"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:layout_marginStart="43dp" />
+
+                    <TextView
+                        android:id="@+id/tvFullAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jalan Rangkapan Jaya, Perumahan basalamah Rt.03 Rw.10"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:layout_marginStart="43dp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Gmap Button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <Button
+                        android:id="@+id/btnGmap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Google MAPS"
+                        android:textAlignment="textStart"
+                        android:textSize="20sp"
+                        android:drawableStart="@drawable/maps_logo"
+                        android:backgroundTint="#4CAF50"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <!-- Save Button -->
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Simpan"
+                    android:background="@drawable/btn_edit"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bluesky"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnDashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/home_logo"
+            android:background="@null"
+            android:text="Dashboard"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/logout_logo"
+            android:background="@null"
+            android:text="Logout"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <!-- ScrollView for Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- LinearLayout for Content -->
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Teks Dashboard -->
+            <TextView
+                android:id="@+id/dashboard_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Dashboard"
+                android:textColor="@color/biru_gelap"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- LinearLayout for Image and Text -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Gambar Dashboard -->
+                <ImageView
+                    android:id="@+id/dashboard_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/dashboard" />
+
+                <!-- Text Container -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp">
+
+                    <!-- Teks Selamat Datang -->
+                    <TextView
+                        android:id="@+id/halo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selamat datang,"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/biru_gelap" />
+                    <TextView
+                        android:id="@+id/user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Halo, Randy Ananda"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/biru_gelap" />
+
+                    <!-- Teks Sub -->
+                    <TextView
+                        android:id="@+id/sub_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rencanakan Liburanmu Sekarang"
+                        android:textSize="15sp"
+                        android:textColor="@color/biru_gelap"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CardView Rencana Liburan -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_plans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/card_background"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/plan_count_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:textColor="@color/biru_gelap"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rencana Liburan"
+                        android:textSize="18sp"
+                        android:textColor="@color/biru_gelap" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tombol Profil mu -->
+            <Button
+                android:id="@+id/profile_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Profil mu"
+                android:textSize="16sp"
+                android:backgroundTint="@color/bluesky"
+                android:textColor="@android:color/white"
+                android:drawableStart="@drawable/person_logo"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scaleType="centerInside" />
+
+            <!-- Tombol Buat Baru Rencana mu -->
+            <Button
+                android:id="@+id/new_plan_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Buat Baru Rencana mu"
+                android:textSize="16sp"
+                android:backgroundTint="@color/birutosca"
+                android:textColor="@android:color/white"
+                android:drawableStart="@drawable/plan_logo"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scaleType="centerInside" />
+
+            <!-- Tombol Lihat List Rencana -->
+            <Button
+                android:id="@+id/view_plans_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Lihat List Rencana"
+                android:textSize="16sp"
+                android:backgroundTint="@color/biru_gelap"
+                android:textColor="@android:color/white"
+                android:drawableStart="@drawable/list_logo"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scaleType="centerInside" />
+
+            <!-- Tombol Logout -->
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Logout"
+                android:textSize="16sp"
+                android:backgroundTint="@color/softred"
+                android:textColor="@android:color/white"
+                android:drawableStart="@drawable/logout2_logo"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

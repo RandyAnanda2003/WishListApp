@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "543528564256",
+    "firebase_url": "https://wishlistapp-a2748-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "wishlistapp-a2748",
+    "storage_bucket": "wishlistapp-a2748.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543528564256:android:162785555e88ccdbc66e45",
+        "android_client_info": {
+          "package_name": "com.example.wishlistapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_zf900vM8Q7PiqTKZzkMhzsvn97WI3do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
